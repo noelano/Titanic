@@ -17,6 +17,11 @@ print(df['Survived'].value_counts())
 print(df['Pclass'].value_counts())
 print(df['Embarked'].value_counts())
 
+# Histograms of some data
+plt.figure()
+df[['Age', 'Fare', 'Pclass', 'Survived']].hist()
+plt.show()
+
 # Compare age with survival and class with survival
 
 plt.scatter(df['Fare'], df['Age'], c=df['Survived'])
